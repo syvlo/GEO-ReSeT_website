@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<title>GEO-ReSeT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+.selected-button:hover {
+  color:white !important;
+  background-color:#616161 !important
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('images/Background1.png');
+    min-height: 100%;
+}
+
+/* Second image (DL) */
+.bgimg-2 {
+    background-image: url("images/Background1.png");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("images/Background1.png");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+    }
+}
+</style>
+<body onload="switchDataSet(0)">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i> HOME</a>
+    <a href="#overview" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-space-shuttle"></i> OVERVIEW</a>
+    <a href="#news" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-newspaper"></i> NEWS</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <!--<a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>-->
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#overview" class="w3-bar-item w3-button" onclick="toggleFunction()">OVERVIEW</a>
+    <a href="#news" class="w3-bar-item w3-button" onclick="toggleFunction()">NEWS</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <!--<a href="#" class="w3-bar-item w3-button">SEARCH</a>-->
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"><span class="w3-hide-small">GEO-ReSeT</span></span>
+  </div>
+</div>
+
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="overview">
+  <h3 class="w3-center">OVERVIEW</h3>
+  <p class="w3-left-align">This page presents the Generalized Earth Observation with Remote Sensing and Text (GEO-ReSeT) project funded by the TSIA program of <a href="https://www.anr.fr">ANR</a></p>
+  
+  <p class="w3-left-align">By using location on the Earth's surface as the common link between different modalities, a geo-spatial foundation model would be able to incorporate a variety of data sources, including remote sensing imagery, textual descriptions of places, and features in maps. Leveraging the large amounts of available unlabeled geo-spatial data from these different sources, the GEO-ReSeT (Generalized Earth Observation with Remote Sensing and Text) ANR project has the objective to learn a better representation of any geo-spatial location and convey a semantic representation of the information.</p>
+  <p class="w3-left-align">Such a foundation model has the potential to revolutionize Earth observation by allowing for few or zero-shot solutions to classical problems such as land-cover and land-use mapping, target detection, and visual question answering. It will also be useful for a wide range of applications with a geo-spatial component, including environmental monitoring, urban planning and agriculture.</p>
+</div>
+
+
+<div class="bgimg-3 w3-display-container">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">NEWS</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="news">
+  <h3 class="w3-center">News</h3>
+  <ul class="w3-ul w3-border" style="width:100%">
+  <li>24/11/2023: We are offering three MSc internships.</li>
+</ul>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">PEOPLE</h3>
+  <p class="w3-center">PI: <a href="https://www.sylvainlobry.com">Sylvain Lobry (UPC)</a>
+    <br>
+    INRIA PI: Diego Marcos (INRIA)
+    <br>
+    <a href="http://camille-kurtz.com">Camille Kurtz (UPC)</a>,  <a href="https://helios2.mi.parisdescartes.fr/~lwendlin/">Laurent Wendling (UPC)</a>, <a href="https://sites.google.com/site/dinoienco/">Dino Ienco (INRAE)</a>
+  <p class="w3-center"><i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Email (for Sylvain Lobry only): firstname.lastname at u-paris.fr<br></p>
+  <p class="w3-center">This work is funded by <a href="https://www.anr.fr">ANR</a></p>
+  <div class="w3-center">
+    <img style="width:30%; margin:10px" src="images/ANR-logo-2021-complet.jpg" alt="logo anr">
+    <img style="width:30%; margin:10px" src="images/logo-UPC.jpeg" alt="logo Université Paris Cité">
+    <img style="width:30%; margin:10px" src="images/logo-inria.jpg" alt="logo INRIA">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+</body>
+</html>
